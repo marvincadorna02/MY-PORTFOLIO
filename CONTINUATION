@@ -1,0 +1,27 @@
+<!-- Projects Section -->
+<section id="projects" class="projects">
+  <div class="container">
+    <h2>Projects & Achievements</h2>
+    <div class="project-list">
+      
+      <div class="project-card">
+        <img src="images/POS.jpg" alt="Project 1" />
+        <h3>Macrema Cafe</h3>
+        <p>
+    A Point of Sale (POS) System developed for <span>Macrema Café</span> to streamline
+    daily operations. The system manages order processing, sales tracking,
+    and inventory management.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project2.png" alt="Project 2" />
+        <h3>E-commerce Website</h3>
+        <p>An online store with product listing, cart, and checkout system.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project3.png" alt="Project 3" />
+        <h3>Mobile App</h3>
+        <p>A simple mobile app built with Kotlin and Firebase integration.</p>
+      </div>
