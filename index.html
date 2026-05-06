@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marvin Cadorna — Web Developer</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+      <div class="logo">Mrvn<span class="logo-dot">.</span></div>
+
+      <!-- Desktop right: toggle + links -->
+      <div class="nav-right">
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Toggle dark mode"
+        >
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Mobile right: toggle + burger (nav-links rendered separately below) -->
+      <div class="nav-mobile-right">
+        <button
+          class="theme-toggle"
+          id="themeToggleMobile"
+          aria-label="Toggle dark mode"
+        >
+          <i class="fa-solid fa-moon" id="themeIconMobile"></i>
+        </button>
+        <div class="burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MOBILE NAV MENU (outside navbar so display:none on nav-right doesn't affect it) -->
+    <ul class="mobile-nav-links" id="mobileNavLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- MOBILE OVERLAY -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for freelance
+        </div>
+        <h1>
+          Hi, I'm<br />
+          <em>Marvin</em><br />
+          Web Developer
+        </h1>
+        <p class="hero-sub">
+          Building clean, responsive web experiences with purpose and precision.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="#contact" class="btn-ghost">Get In Touch</a>
+        </div>
+
+        <div class="social-icons">
+          <a href="#" aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/marvincadorna02"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/marvin.cadorna.3154/"
+            target="_blank"
+            aria-label="Facebook"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="hero-img">
+        <div class="shape"></div>
+        <img src="marvin.png" alt="Marvin Cadorna" />
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about anim-section">
+      <div class="container">
+        <div class="section-label">Who I Am</div>
+        <h2>About Me</h2>
+        <p>
+          I'm <strong>Marvin Cadorna</strong>, a passionate
+          <strong>Web Developer</strong> who loves creating clean and responsive
+          websites. I enjoy solving problems with code and continuously learning
+          new technologies to improve my craft.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills anim-section">
+      <div class="container">
+        <div class="section-label">What I Know</div>
+        <h2>Skills</h2>
+
+        <div class="skills-list">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+            <h3>HTML5</h3>
+            <p>Building structured and semantic web pages.</p>
+            <div class="skill-progress">
+              <div class="progress-track">
+                <div class="progress-fill" data-percent="55"></div>
+              </div>
+              <span class="percent-label">0%</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <h3>CSS</h3>
+            <p>Designing responsive and visually appealing layouts.</p>
+            <div class="skill-progress">
+              <div class="progress-track">
+                <div class="progress-fill" data-percent="45"></div>
+              </div>
+              <span class="percent-label">0%</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-brands fa-figma"></i></div>
+            <h3>Figma</h3>
+            <p>Creating modern UI/UX prototypes and designs.</p>
+            <div class="skill-progress">
+              <div class="progress-track">
+                <div class="progress-fill" data-percent="70"></div>
+              </div>
+              <span class="percent-label">0%</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <h3>Android Studio</h3>
+            <p>Building mobile apps using Java/Kotlin.</p>
+            <div class="skill-progress">
+              <div class="progress-track">
+                <div class="progress-fill" data-percent="30"></div>
+              </div>
+              <span class="percent-label">0%</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-brands fa-php"></i></div>
+            <h3>PHP</h3>
+            <p>Developing dynamic server-side web applications.</p>
+            <div class="skill-progress">
+              <div class="progress-track">
+                <div class="progress-fill" data-percent="50"></div>
+              </div>
+              <span class="percent-label">0%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects anim-section">
+      <div class="container">
+        <div class="section-label">What I've Built</div>
+        <h2>Projects & Achievements</h2>
+        <div class="project-list">
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="POS.jpg" alt="Macrema Cafe POS" />
+              <div class="project-overlay">
+                <span>View Project</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Macrema Cafe</h3>
+              <div class="project-tag">Point of Sale System</div>
+              <p>
+                A POS System developed for <strong>Macrema Cafe</strong> to
+                streamline order processing, sales tracking, and inventory
+                management.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="attendify.png" alt="Attendify App" />
+              <div class="project-overlay">
+                <span>View Project</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Attendify</h3>
+              <div class="project-tag">Android Application</div>
+              <p>
+                An <strong>Android attendance management app</strong> built with
+                Android Studio. Tracks student attendance digitally with a
+                user-friendly interface.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="fluffin.jpeg" alt="Fluffin Bakery" />
+              <div class="project-overlay">
+                <span>View Project</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Fluffin Bakery</h3>
+              <div class="project-tag">E-Commerce Website</div>
+              <p>
+                A full-featured <strong>Bakery E-Commerce Website</strong> built
+                with PHP. Includes auth, product menu, shopping cart, and order
+                management.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact anim-section">
+      <div class="container">
+        <div class="section-label">Let's Talk</div>
+        <h2>Contact Me</h2>
+        <p class="contact-intro">
+          If you'd like to collaborate or just say hi, feel free to reach out!
+        </p>
+
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">marvincadorna07@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <div class="contact-label">Phone</div>
+                <div class="contact-value">+63 970 059 6622</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="contact-label">Location</div>
+                <div class="contact-value">Davao City, Philippines</div>
+              </div>
+            </div>
+          </div>
+
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/mzznvwdw"
+            method="POST"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Juan Dela Cruz"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label>Your Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="juan@email.com"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea
+                name="message"
+                placeholder="Tell me about your project..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>
+        © 2025 <strong>Marvin Cadorna</strong>. Designed & built with passion.
+      </p>
+    </footer>
+
+    <script>
+      // Scroll animations
+      const animSections = document.querySelectorAll(".anim-section");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("show");
+            else entry.target.classList.remove("show");
+          });
+        },
+        { threshold: 0.12 },
+      );
+      animSections.forEach((s) => observer.observe(s));
+
+      // Skill progress bars
+      const skillSection = document.querySelector("#skills");
+      let skillsLoaded = false;
+      const skillObserver = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting && !skillsLoaded) {
+            document.querySelectorAll(".progress-fill").forEach((bar) => {
+              const pct = bar.dataset.percent;
+              bar.style.width = pct + "%";
+              const label = bar
+                .closest(".skill-card")
+                .querySelector(".percent-label");
+              // Animate number
+              let current = 0;
+              const target = parseInt(pct);
+              const step = () => {
+                if (current < target) {
+                  current++;
+                  label.textContent = current + "%";
+                  requestAnimationFrame(step);
+                }
+              };
+              requestAnimationFrame(step);
+            });
+            skillsLoaded = true;
+          }
+        },
+        { threshold: 0.2 },
+      );
+      skillObserver.observe(skillSection);
+
+      // Dark mode toggle
+      const themeToggle = document.getElementById("themeToggle");
+      const themeIcon = document.getElementById("themeIcon");
+      const themeToggleMobile = document.getElementById("themeToggleMobile");
+      const themeIconMobile = document.getElementById("themeIconMobile");
+      const savedTheme = localStorage.getItem("theme");
+
+      function setTheme(isDark) {
+        // Flash overlay for smooth feel
+        const flash = document.createElement("div");
+        flash.style.cssText = `
+          position: fixed; inset: 0; z-index: 9999;
+          background: ${isDark ? "#0f0f0f" : "#ffffff"};
+          opacity: 0; pointer-events: none;
+          transition: opacity 0.25s ease;
+        `;
+        document.body.appendChild(flash);
+        requestAnimationFrame(() => {
+          flash.style.opacity = "0.18";
+          setTimeout(() => {
+            flash.style.opacity = "0";
+            setTimeout(() => flash.remove(), 300);
+          }, 180);
+        });
+
+        document.body.classList.toggle("dark", isDark);
+
+        const iconClass = isDark ? "fa-sun" : "fa-moon";
+        const removeClass = isDark ? "fa-moon" : "fa-sun";
+        themeIcon.classList.replace(removeClass, iconClass);
+        themeIconMobile.classList.replace(removeClass, iconClass);
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      }
+
+      if (savedTheme === "dark") setTheme(true);
+
+      themeToggle.addEventListener("click", () => {
+        setTheme(!document.body.classList.contains("dark"));
+        themeToggle.classList.add("spinning");
+        setTimeout(() => themeToggle.classList.remove("spinning"), 450);
+      });
+
+      themeToggleMobile.addEventListener("click", () => {
+        setTheme(!document.body.classList.contains("dark"));
+        themeToggleMobile.classList.add("spinning");
+        setTimeout(() => themeToggleMobile.classList.remove("spinning"), 450);
+      });
+
+      const burger = document.getElementById("burger");
+      const mobileNavLinks = document.getElementById("mobileNavLinks");
+      const overlay = document.getElementById("navOverlay");
+
+      function closeMenu() {
+        mobileNavLinks.classList.remove("open");
+        burger.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      burger.addEventListener("click", () => {
+        const isOpen = mobileNavLinks.classList.toggle("open");
+        burger.classList.toggle("active");
+        overlay.classList.toggle("active");
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      });
+
+      overlay.addEventListener("click", closeMenu);
+
+      document.querySelectorAll(".mobile-nav-links a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+    </script>
+  </body>
+</html>
